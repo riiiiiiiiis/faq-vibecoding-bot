@@ -1,64 +1,66 @@
+import styles from './page.module.css';
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="max-w-2xl mx-auto text-center">
-        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-          <div className="mb-6">
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">
+    <main className={styles.main}>
+      <div className={styles.container}>
+        <div className={styles.card}>
+          <div className={styles.header}>
+            <h1 className={styles.title}>
               🤖 FAQ-бот для Telegram
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className={styles.subtitle}>
               Развёрнут и готов к работе!
             </p>
           </div>
           
-          <div className="space-y-4 text-left bg-gray-50 rounded-lg p-6">
-            <h2 className="text-xl font-semibold text-gray-700 mb-3">
+          <div className={styles.content}>
+            <h2 className={styles.contentTitle}>
               📋 Что делать дальше:
             </h2>
             
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
+            <div className={styles.steps}>
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>
                   1
                 </span>
-                <p className="text-gray-700">
-                  Настрой переменные окружения на Vercel: <code className="bg-gray-200 px-2 py-1 rounded text-sm">TELEGRAM_BOT_TOKEN</code> и <code className="bg-gray-200 px-2 py-1 rounded text-sm">TELEGRAM_WEBHOOK_SECRET</code>
+                <p className={styles.stepText}>
+                  Настрой переменные окружения на Vercel: <code className={styles.code}>TELEGRAM_BOT_TOKEN</code> и <code className={styles.code}>TELEGRAM_WEBHOOK_SECRET</code>
                 </p>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>
                   2
                 </span>
-                <p className="text-gray-700">
+                <p className={styles.stepText}>
                   Задеплой проект на Vercel
                 </p>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>
                   3
                 </span>
-                <p className="text-gray-700">
+                <p className={styles.stepText}>
                   Настрой webhook в браузере по инструкции из README
                 </p>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold flex-shrink-0">
+              <div className={styles.step}>
+                <span className={styles.stepNumber}>
                   4
                 </span>
-                <p className="text-gray-700">
-                  Протестируй бота: отправь <code className="bg-gray-200 px-2 py-1 rounded text-sm">/start</code> и <code className="bg-gray-200 px-2 py-1 rounded text-sm">/faq</code>
+                <p className={styles.stepText}>
+                  Протестируй бота: отправь <code className={styles.code}>/start</code> и <code className={styles.code}>/faq</code>
                 </p>
               </div>
             </div>
           </div>
           
-          <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
-            <p className="text-green-800 font-medium">
-              ✅ Бот готов принимать сообщения через webhook на <code className="bg-green-100 px-2 py-1 rounded">/api/telegram</code>
+          <div className={styles.footer}>
+            <p className={styles.footerText}>
+              ✅ Бот готов принимать сообщения через webhook на <code className={styles.code}>/api/telegram</code>
             </p>
           </div>
         </div>
